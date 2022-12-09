@@ -706,8 +706,7 @@ function generateTodosFromCommit() {
     return __awaiter(this, void 0, void 0, function* () {
         const todos = [];
         // RegEx that matches lines with the configured keywords
-        const regex = new RegExp(`^(?<beforeTag>\\W+)(?<keyword>${ArgumentContext_1.argumentContext.keywords.join('|')}|todo\\!\\(\\")\\b(?<title>((?!.)|(?!\\)).)+)`, (!ArgumentContext_1.argumentContext.caseSensitive ? 'i' : ''));
-        console.log(regex.toString());
+        const regex = new RegExp(`^(?<beforeTag>\\W+)(?<keyword>${ArgumentContext_1.argumentContext.keywords.join('|')}|todo\\!\\(\\")\\b(?<title>((?!.)|(?!\\").)+)`, (!ArgumentContext_1.argumentContext.caseSensitive ? 'i' : ''));
         let files;
         // Diff as files or import all
         if (ArgumentContext_1.argumentContext.importAll) {
