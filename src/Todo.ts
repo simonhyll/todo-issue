@@ -14,8 +14,8 @@ export async function generateTodosFromCommit() {
     const todos: Todo[] = []
 
     // RegEx that matches lines with the configured keywords
-    const regex = new RegExp(`^(?<beforeTag>\\W+)(?<keyword>${argumentContext.keywords.join('|')}|todo\!\(\")\\b\\s*(?<title>((?!.)|(?!\\)).)+)`, (!argumentContext.caseSensitive ? 'i' : ''))
-    console.log(regex)
+    const regex = new RegExp(`^(?<beforeTag>\\W+)(?<keyword>${argumentContext.keywords.join('|')}|todo\\!\\(\\")\\b(?<title>((?!.)|(?!\\)).)+)`, (!argumentContext.caseSensitive ? 'i' : ''))
+
     let files: File[];
 
     // Diff as files or import all
