@@ -3,7 +3,7 @@ import {getInput} from 'action-input-parser';
 
 export const argumentContext = {
 
-    keywords: getInput('keywords', {type: 'array', default: ['TODO']}) as Array<string>,
+    keywords: getInput('keywords', {type: 'array', default: ['TODO','@todo','todo!("']}) as Array<string>,
     bodyKeywords: getInput('bodyKeywords', {type: 'array', default: []}) as Array<string>,
 
     caseSensitive: getInput('caseSensitive', {type: "boolean", default: true}) as boolean,
